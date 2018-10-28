@@ -6,7 +6,7 @@ def get_events():
         for line in file:
             line = line.rstrip('\n')
             current_event = line.split(',')
-            event_date = datetime.strptime(current_event[1], '%d/%m').date()
+            event_date = datetime.strptime(current_event[1], '%d/%m/%y').date()
             current_event[1] = event_date
             list_events.append(current_event)
     return list_events
